@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Featherward — ta sélection de champion, et tes parties, en plus clair</title>
-<meta name="description" content="Featherward s'ouvre quand ta sélection de champion commence dans League of Legends : ton équipe, tes adversaires, ce qui gagne à ton niveau. Après la partie, il t'aide à progresser. Léger, gratuit, sans compte.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Featherward : prépare ta sélection, comprends tes parties</title>
+<meta name="description" content="Featherward t'aide en sélection de champion (builds, runes, matchups) et analyse tes parties de League of Legends après coup. Gratuit, léger, sans compte.">
 <link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%231a1e27' stroke='%23d6b46a' stroke-width='6'/%3E%3Cpath d='M30 76 C 40 50, 55 32, 74 22 C 72 44, 58 62, 36 72 Z' fill='%23d6b46a'/%3E%3C/svg%3E">
@@ -29,56 +31,51 @@ Featherward
 <main id="contenu">
 <section class="accueil" aria-labelledby="titre">
 <div>
-<h1 id="titre">Ta sélection de champion, et tes parties, en plus clair.</h1>
-<p>Featherward s'ouvre quand ta sélection commence dans League of Legends : ton équipe, tes adversaires, et ce qui gagne vraiment à ton niveau. Après la partie, il t'explique ce qui a marché, et ce que tu peux travailler.</p>
+<h1 id="titre">Prépare ta game en sélection. Comprends-la après.</h1>
+<p>Featherward s'ouvre tout seul quand ta sélection démarre : les deux équipes, ton matchup, le build et les runes qui marchent à ton elo. Une fois la partie finie, il te montre où elle s'est jouée.</p>
 <div class="actions">
 <a class="bouton bouton-principal" aria-disabled="true" role="link">Télécharger pour Windows</a>
-<a class="bouton" href="#fonctionnement">Voir comment ça marche</a>
+<a class="bouton" href="#fonctionnement">Comment ça marche</a>
 </div>
 <p class="note">Bientôt disponible. Gratuit, sans compte, en français et en anglais.</p>
 </div>
 <figure class="fenetre">
-<img src="captures/selection.png" width="1280" height="820" alt="La vue Sélection de Featherward après le lock : les deux équipes en bandeau, ton champion en grand avec son build et ses runes, ton matchup et les ults adverses.">
-<figcaption>La vue Sélection, pendant une sélection de champion.</figcaption>
+<img src="captures/selection.png" width="1280" height="820" alt="La vue Sélection de Featherward une fois le champion lock : les deux équipes, ton champion avec son build et ses runes, ton matchup et les ults adverses.">
+<figcaption>En sélection, une fois ton champion lock.</figcaption>
 </figure>
 </section>
 
 <section class="section" aria-labelledby="titre-vues">
-<h2 id="titre-vues">Ce que fait Featherward</h2>
-<p>Avant la partie, la sélection ; après, ton profil et l'analyse de tes parties. Rien pendant la partie.</p>
+<h2 id="titre-vues">Ce qu'il fait</h2>
+<p>Featherward travaille avant et après ta partie. Pendant, il ne fait rien.</p>
 
 <article class="vue vue-allie">
 <div class="vue-texte">
-<h3>La sélection, d'un coup d'œil</h3>
-<p>Dès que ta sélection commence, Featherward passe au premier plan.</p>
-<ul>
-<li>Ton équipe et tes adversaires, leurs rôles et leur profil de dégâts.</li>
-<li>Les temps de recharge des sorts adverses et de leurs summoners.</li>
-<li>Avant ton lock, « Que jouer ? » : tes champions classés face à ton matchup probable et à ton niveau, et ce qu'ils apportent à ton équipe.</li>
-<li>Après ton lock, « Prépare ta partie » : ton champion en grand, son build, ses runes à importer d'un clic, ton matchup et les ults adverses.</li>
-</ul>
+<h3>En sélection, avant de lock</h3>
+<p>Tant que tu n'as pas lock, tu vois tes champions classés pour cette game : leur winrate contre ton adversaire probable, leur winrate à ton elo, et ce qu'ils apportent quand ton équipe manque de dégâts magiques ou de frontline.</p>
+<p>En haut, les deux équipes avec leurs rôles et le cooldown des ults adverses.</p>
 </div>
 <figure class="fenetre">
-<img src="captures/selection.png" width="1280" height="820" alt="Les équipes, avec la carte Matchup qui compare tes champions à ton adversaire direct.">
+<img src="captures/selection-avant.png" width="1280" height="820" alt="Avant le lock : ton pool classé contre ton adversaire probable et à ton niveau, ce qui manque à ton équipe et le champion que tu survoles.">
 </figure>
 </article>
 
 <article class="vue vue-toi">
 <div class="vue-texte">
-<h3>Ce qui se joue, et ce qui gagne</h3>
-<p>Pour ton champion, à ton niveau : les objets, les runes, l'ordre des sorts. Le choix le plus joué, et celui qui gagne vraiment, toujours avec le nombre de parties.</p>
-<p>Un clic importe une page de runes ou tes summoners. La page va dans une page « Featherward » à part : les tiennes restent intactes.</p>
+<h3>Une fois lock</h3>
+<p>Ton champion passe en grand avec le build le plus joué à ton elo, et celui qui gagne le plus quand ce n'est pas le même. Chaque chiffre vient avec son nombre de parties.</p>
+<p>Runes et summoners s'importent en un clic, dans une page « Featherward » à part. Tes propres pages ne bougent pas.</p>
 </div>
 <figure class="fenetre">
-<img src="captures/runes.png" width="1248" height="240" alt="Une page de runes recommandée, dessinée comme dans le client, avec son bouton d'import.">
+<img src="captures/runes.png" width="1248" height="240" alt="Une page de runes proposée, dessinée comme dans le client, avec son bouton d'import.">
 </figure>
 </article>
 
 <article class="vue vue-allie">
 <div class="vue-texte">
-<h3>Après la partie : ce qui a marché, ce qui se travaille</h3>
-<p>Déplie une de tes parties : Featherward en tire des points forts et trois pistes de progression au plus, chacune appuyée sur un fait daté. Morts loin de ton équipe, objectifs perdus après une mort, gold non dépensé, teamfights manqués, lane gagnée ou perdue face à ton matchup.</p>
-<p>Pas de note, pas de comparaison avec les autres : seulement ta partie, et des pistes concrètes.</p>
+<h3>Après la game</h3>
+<p>Ouvre une partie de ton historique. Featherward relève ce qui a marché et au plus trois choses à travailler, avec le moment exact à chaque fois : une mort loin de ton équipe, un drake perdu juste derrière, du gold gardé trop longtemps, un teamfight raté.</p>
+<p>Il ne te met pas de note. Il te montre des moments précis de ta partie.</p>
 </div>
 <figure class="fenetre">
 <img src="captures/analyse.png" width="860" height="700" alt="L'onglet Analyse d'une partie : points forts, pistes de progression et écart de gold avec ton matchup.">
@@ -87,8 +84,8 @@ Featherward
 
 <article class="vue vue-toi">
 <div class="vue-texte">
-<h3>Le déroulé de la partie</h3>
-<p>Chaque objectif épinglé sur l'avance en gold de ton équipe, avec les icônes du jeu : drakes, Nashor, Herald, grubs, tours. Au survol, qui l'a pris et qui a aidé.</p>
+<h3>Le déroulé</h3>
+<p>Les objectifs posés sur la courbe de gold de ton équipe, avec les icônes du jeu : drakes, Nashor, Herald, grubs, tours. Survole un objectif pour voir qui l'a pris et qui était là.</p>
 </div>
 <figure class="fenetre">
 <img src="captures/objectifs.png" width="860" height="590" alt="Le déroulé d'une partie : objectifs pris par chaque équipe sur la courbe d'avance en gold.">
@@ -97,18 +94,18 @@ Featherward
 
 <article class="vue vue-allie">
 <div class="vue-texte">
-<h3>La carte de chaleur</h3>
-<p>Où se sont joués les kills, où tu es mort, où tu étais. Un clic sur un point raconte le fight : qui, avec qui, et ce qu'il a coûté.</p>
+<h3>La heatmap</h3>
+<p>Où il y a eu des kills, où tu es mort, où tu traînais. Clique sur un point pour revoir le fight : qui était là, et ce qu'il a coûté.</p>
 </div>
 <figure class="fenetre">
-<img src="captures/carte.png" width="860" height="520" alt="La carte de chaleur d'une partie, avec la fiche d'un kill ouverte.">
+<img src="captures/carte.png" width="860" height="520" alt="La heatmap d'une partie, avec la fiche d'un kill ouverte.">
 </figure>
 </article>
 
 <article class="vue vue-toi">
 <div class="vue-texte">
-<h3>Ton profil, quand tu veux</h3>
-<p>Un clic sur la plume, près de l'horloge, ouvre ton profil, même sans sélection en cours : ton classement, ta forme, tes rôles, tes champions et tes dernières parties.</p>
+<h3>Ton profil</h3>
+<p>Clique sur la plume, à côté de l'heure : ton rang, ta forme du moment, tes rôles, tes champions et tes dernières parties. Ça marche aussi en dehors de la sélection.</p>
 </div>
 <figure class="fenetre">
 <img src="captures/profil.png" width="1280" height="820" alt="La vue Profil : classement, forme sur les dix dernières parties, rôles, champions et historique.">
@@ -118,42 +115,42 @@ Featherward
 
 <section class="section" id="fonctionnement" aria-labelledby="titre-fonctionnement">
 <h2 id="titre-fonctionnement">Comment ça marche</h2>
-<p>Rien à configurer : tout vient de ton client League of Legends.</p>
+<p>Rien à régler : Featherward lit ton client League of Legends.</p>
 <ol class="etapes">
 <li>
-<h3>Lance Featherward</h3>
-<p>Une plume apparaît près de l'horloge. Featherward attend sans rien consommer : environ 5 Mo de mémoire, et aucune activité tant qu'il ne se passe rien.</p>
+<h3>Lance-le</h3>
+<p>Une plume s'ajoute à côté de l'heure. Au repos, il prend environ 5 Mo de mémoire et n'utilise pas le processeur.</p>
 </li>
 <li>
-<h3>Entre en sélection</h3>
-<p>La fenêtre s'ouvre d'elle-même et suit la sélection en direct : choix, bans, intentions de ton équipe.</p>
+<h3>Lance une partie</h3>
+<p>Dès que la sélection commence, la fenêtre s'ouvre et suit les picks, les bans et les hovers de ton équipe.</p>
 </li>
 <li>
 <h3>Joue, puis reviens</h3>
-<p>Pendant ta partie, Featherward ne fait rien. Après, déplie-la dans ton historique pour son analyse, son déroulé et sa carte.</p>
+<p>Pendant la partie, Featherward ne fait rien. Après, ouvre-la dans ton historique.</p>
 </li>
 </ol>
 </section>
 
 <section class="section" id="fair-play" aria-labelledby="titre-fair-play">
 <h2 id="titre-fair-play">Fair-play</h2>
-<p>Featherward suit les règles de Riot Games pour les outils tiers.</p>
+<p>Featherward suit les règles de Riot pour les outils tiers. Concrètement :</p>
 <div class="engagements">
-<div><h3>Rien pendant la partie</h3><p>Aucune lecture de la mémoire du jeu, aucune information en partie. Featherward ne lit les joueurs qu'une fois, au chargement, puis plus rien jusqu'à la fin.</p></div>
-<div><h3>Les joueurs masqués le restent</h3><p>Pendant la sélection, Featherward ne lit jamais l'identité des autres joueurs. Un joueur anonyme le reste, toujours.</p></div>
-<div><h3>Pas de MMR</h3><p>Aucune estimation de MMR ni de classement caché : seulement des statistiques de jeu.</p></div>
-<div><h3>Tu choisis</h3><p>Plusieurs choix proposés, jamais un seul imposé. Featherward ne modifie ton client que sur ton clic, et jamais tes propres pages de runes.</p></div>
+<div><h3>Rien en jeu</h3><p>Il ne lit pas la mémoire du jeu et n'affiche rien pendant la partie. Il note les champions et les postes une seule fois, au chargement.</p></div>
+<div><h3>Le mode streamer est respecté</h3><p>En sélection, il ne lit jamais le nom des autres joueurs. Un joueur masqué reste masqué.</p></div>
+<div><h3>Pas de MMR</h3><p>Il n'estime ni MMR ni rang caché. Il ne se sert que des stats de parties.</p></div>
+<div><h3>C'est toi qui choisis</h3><p>Il propose plusieurs builds, pas un seul. Il ne touche à ton client que quand tu cliques, et jamais à tes pages de runes.</p></div>
 </div>
 </section>
 
 <section class="section" aria-labelledby="titre-donnees">
 <h2 id="titre-donnees">Tes données</h2>
-<p>Featherward a été conçu pour en savoir le moins possible sur toi.</p>
+<p>Featherward en sait le moins possible sur toi.</p>
 <div class="engagements">
-<div><h3>Aucun compte</h3><p>Pas d'inscription, pas de connexion : Featherward lit ton client, et c'est tout.</p></div>
-<div><h3>Tout reste chez toi</h3><p>Tes statistiques et l'analyse de tes parties sont calculées sur ton ordinateur. Featherward ne les envoie nulle part.</p></div>
-<div><h3>Les autres joueurs restent anonymes</h3><p>Les statistiques communes viennent de parties dont aucun identifiant de joueur n'est conservé.</p></div>
-<div><h3>Aucun traceur</h3><p>Ni dans l'application, ni sur ce site : pas de cookie, pas de mesure d'audience, pas de publicité.</p></div>
+<div><h3>Pas de compte</h3><p>Ni inscription, ni connexion.</p></div>
+<div><h3>Tout se calcule chez toi</h3><p>Tes stats et l'analyse de tes parties restent sur ton PC.</p></div>
+<div><h3>Les autres joueurs restent anonymes</h3><p>Les stats communes viennent de parties dont on ne garde aucun identifiant de joueur.</p></div>
+<div><h3>Aucun traceur</h3><p>Ni cookie, ni mesure d'audience, ni pub, dans l'appli comme sur ce site.</p></div>
 </div>
 <p><a href="confidentialite.html">Lire la politique de confidentialité</a></p>
 </section>
@@ -161,28 +158,28 @@ Featherward
 <section class="section faq" aria-labelledby="titre-faq">
 <h2 id="titre-faq">Questions fréquentes</h2>
 <details>
-<summary>Featherward ralentit-il mon jeu ?</summary>
-<p>Non. Au repos, il occupe environ 5 Mo de mémoire et n'utilise pas le processeur. Sa fenêtre n'existe que pendant la sélection, ou quand tu l'ouvres toi-même ; ouverte par la sélection, elle se referme avant ta partie.</p>
+<summary>Est-ce que ça fait ramer mon jeu ?</summary>
+<p>Non. Au repos, il prend environ 5 Mo et ne touche pas au processeur. Sa fenêtre n'existe que pendant la sélection, et se ferme avant la partie, ou quand tu l'ouvres toi-même.</p>
 </details>
 <details>
 <summary>D'où viennent les builds et les matchups ?</summary>
-<p>De parties classées récentes, à ton niveau et sur ton serveur, récupérées par l'API officielle de Riot puis agrégées. Le nombre de parties est toujours affiché, et un choix joué trop peu de fois n'est jamais présenté comme « celui qui gagne ».</p>
+<p>De parties classées récentes de ton elo et de ton serveur, récupérées avec l'API officielle de Riot. Le nombre de parties est toujours affiché, et un build joué trop peu de fois n'est jamais mis en avant.</p>
 </details>
 <details>
 <summary>D'où vient l'analyse de mes parties ?</summary>
-<p>De ton client League of Legends, qui garde le détail et la chronologie de tes 20 dernières parties. Featherward les lit quand tu déplies une partie, et fait tous les calculs sur ton ordinateur.</p>
+<p>De ton client, qui garde le détail de tes 20 dernières parties. Featherward les lit quand tu en ouvres une et fait les calculs sur ton PC.</p>
 </details>
 <details>
-<summary>Est-ce conforme aux règles de Riot ?</summary>
-<p>Featherward est conçu pour respecter les règles de Riot pour les outils tiers : il n'affiche que ce que le client montre déjà ou des statistiques générales, ne révèle aucun joueur masqué, ne prend aucune décision à ta place, et ne fait rien pendant ta partie.</p>
+<summary>C'est autorisé par Riot ?</summary>
+<p>Featherward suit les règles de Riot pour les outils tiers : il n'affiche que des infos que le client montre déjà ou des stats générales, ne démasque personne, ne décide pas à ta place et ne fait rien pendant la partie.</p>
 </details>
 <details>
-<summary>Est-ce gratuit ?</summary>
-<p>Oui, entièrement.</p>
+<summary>C'est gratuit ?</summary>
+<p>Oui, et tout ce que tu vois sur cette page le restera. Des options payantes viendront peut-être plus tard, pour des fonctions à part comme l'enregistrement de tes parties.</p>
 </details>
 <details>
-<summary>Sur quels systèmes fonctionne-t-il ?</summary>
-<p>Sur Windows, là où tourne le client de League of Legends. En français et en anglais, selon la langue de ton client.</p>
+<summary>Ça marche sur quoi ?</summary>
+<p>Sur Windows, comme le client de League of Legends. En français ou en anglais, selon la langue de ton client.</p>
 </details>
 </section>
 </main>

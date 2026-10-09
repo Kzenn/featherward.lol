@@ -36,6 +36,15 @@ jobs:
             echo "::error::Des passages « À COMPLÉTER » restent dans le site."
             exit 1
           fi
+      # Les pages légales doivent garder l'adresse de contact intacte.
+      - name: Vérifier l'adresse de contact
+        run: |
+          for page in site/confidentialite.html site/mentions-legales.html site/en/privacy.html site/en/legal.html; do
+            if ! grep -q 'mailto:contact@featherward.lol' "$page"; then
+              echo "::error::Adresse de contact absente ou abîmée dans $page."
+              exit 1
+            fi
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
