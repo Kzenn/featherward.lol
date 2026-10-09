@@ -1,10 +1,10 @@
 {
   "version_format": 1,
-  "version": "0.36.2",
-  "publie_ms": 1791553608138,
-  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.36.2/featherward-v0.36.2-windows-x64.exe",
-  "sha256": "985b340a5280408ac6b445745392196e29617c041c79898fd64d3d893a326009",
-  "taille": 7568384,
-  "notes_fr": "Sécurité : dépendances réseau mises à jour.",
-  "notes_en": "Security: network dependencies updated."
+  "version": "0.38.0",
+  "publie_ms": 1791567804097,
+  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.38.0/featherward-v0.38.0-windows-x64.exe",
+  "sha256": "554d4d4304a314ad6d67a6981c3e31cdf690b5156b22ecd73dfd8c759d28ee1d",
+  "taille": 7878144,
+  "notes_fr": "",
+  "notes_en": ""
 }
