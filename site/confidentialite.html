@@ -83,7 +83,7 @@ Featherward
 <li>les runes, les sorts d'invocateur, l'ordre de montée des sorts et les objets achetés avec leur minute d'achat ;</li>
 <li>pour la partie : son identifiant technique, son patch, sa durée, sa date et la tranche de niveau où elle a été trouvée.</li>
 </ul>
-<p><strong>Ne sont jamais conservés</strong> : le nom ou le Riot ID d'un joueur, ni l'identifiant de son compte. Pour ne pas parcourir deux fois le même joueur, le service garde seulement une empreinte technique de cet identifiant, conservée à part et sans aucun lien avec les parties enregistrées.</p>
+<p><strong>Ne sont jamais conservés</strong> : le nom ou le Riot ID d'un joueur, ni l'identifiant de son compte. Pour ne pas parcourir deux fois le même joueur, le service garde seulement une empreinte de cet identifiant (HMAC-SHA-256), calculée avec une clé secrète gardée à part, et sans aucun lien avec les parties enregistrées. Sans cette clé, on ne peut pas vérifier si un joueur donné y figure ; c'est une pseudonymisation, pas un anonymat au sens strict.</p>
 <p>Ces données brutes sont conservées le temps de calculer les statistiques de leur patch et du suivant, puis supprimées. Seules les statistiques agrégées, qui ne concernent plus aucun joueur, sont publiées.</p>
 <p>Ce traitement repose sur l'intérêt légitime : produire des statistiques de jeu générales, sans identifier personne.</p>
 

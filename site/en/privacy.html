@@ -83,7 +83,7 @@ Featherward
 <li>runes, summoner spells, skill order, and items bought with the minute they were bought;</li>
 <li>for the game: its technical identifier, patch, duration, date and the rank tier where it was found.</li>
 </ul>
-<p><strong>Never kept</strong>: a player's name or Riot ID, nor their account identifier. To avoid going through the same player twice, the service only keeps a technical fingerprint of that identifier, stored separately and with no link to the recorded games.</p>
+<p><strong>Never kept</strong>: a player's name or Riot ID, nor their account identifier. To avoid going through the same player twice, the service only keeps a fingerprint of that identifier (HMAC-SHA-256), computed with a secret key kept separately, and with no link to the recorded games. Without that key, nobody can check whether a given player is in there; it is pseudonymization, not strict anonymization.</p>
 <p>This raw data is kept while the statistics of its patch and the next one are computed, then deleted. Only aggregated statistics, which no longer concern any player, are published.</p>
 <p>This processing relies on legitimate interest: producing general game statistics without identifying anyone.</p>
 
