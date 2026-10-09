@@ -1,10 +1,10 @@
 {
   "version_format": 1,
-  "version": "0.36.1",
-  "publie_ms": 1791551837048,
-  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.36.1/featherward-v0.36.1-windows-x64.exe",
-  "sha256": "521cadd8537abcd32a6fdf2dfdeb3d2c865171fe531893230318ddbc10c7864d",
-  "taille": 7711744,
-  "notes_fr": "Compatibilité avec Rust 1.99.",
-  "notes_en": "Rust 1.99 compatibility."
+  "version": "0.36.2",
+  "publie_ms": 1791553608138,
+  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.36.2/featherward-v0.36.2-windows-x64.exe",
+  "sha256": "985b340a5280408ac6b445745392196e29617c041c79898fd64d3d893a326009",
+  "taille": 7568384,
+  "notes_fr": "Sécurité : dépendances réseau mises à jour.",
+  "notes_en": "Security: network dependencies updated."
 }
