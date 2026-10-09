@@ -1,0 +1,42 @@
+name: Site
+
+# Publie le dossier site/ sur GitHub Pages (featherward.lol) à chaque
+# modification du site sur la branche principale.
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "site/**"
+      - ".github/workflows/site.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      # Refuse de publier une page où il reste un passage à compléter.
+      - name: Vérifier qu'il ne reste rien à compléter
+        run: |
+          if grep -rl "À COMPLÉTER" site/; then
+            echo "::error::Des passages « À COMPLÉTER » restent dans le site."
+            exit 1
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploiement
+        uses: actions/deploy-pages@v4

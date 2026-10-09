@@ -1,0 +1,301 @@
+/* Featherward — site de présentation.
+   Mêmes couleurs et même police que l'application : le site montre le
+   produit, il ne doit pas ressembler à autre chose. La police est servie
+   par le site lui-même (aucun appel à un service tiers). */
+
+@font-face {
+  font-family: "Barlow";
+  src: url("polices/Barlow-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("polices/Barlow-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("polices/Barlow-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --encre: #0b0d12;
+  --surface: #13161d;
+  --surface-2: #1a1e27;
+  --filet: #262b36;
+  --texte: #f4f5f7;
+  --secondaire: #9ba3b4;
+  --or: #d6b46a;
+  --allie: #4c9bf5;
+  --adverse: #f0803c;
+  --mesure: 68ch;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--encre);
+  color: var(--texte);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+body { margin: 0; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--allie); text-underline-offset: 3px; }
+a:hover { color: var(--texte); }
+
+:focus-visible {
+  outline: 2px solid var(--or);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.saut {
+  position: absolute;
+  left: -9999px;
+}
+.saut:focus { left: 16px; top: 12px; background: var(--surface); padding: 8px 12px; }
+
+/* --- Barre de navigation */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--texte);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+}
+.navigation ul {
+  display: flex;
+  gap: 22px;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.navigation ul a {
+  color: var(--secondaire);
+  text-decoration: none;
+  font-weight: 500;
+}
+.navigation ul a:hover,
+.navigation ul a[aria-current="page"] { color: var(--texte); }
+
+/* --- Accueil : le produit d'abord */
+
+.accueil {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+  gap: 48px;
+  align-items: center;
+}
+.accueil h1 {
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  max-width: 14ch;
+}
+.accueil p {
+  color: var(--secondaire);
+  font-size: 1.12rem;
+  margin: 0 0 28px;
+  max-width: 44ch;
+}
+.actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--filet);
+  background: var(--surface-2);
+  color: var(--texte);
+}
+.bouton-principal { background: var(--allie); border-color: var(--allie); color: var(--encre); }
+.bouton[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+.note { color: var(--secondaire); font-size: 0.9rem; }
+.actions + .note { margin-top: 14px; }
+
+/* La capture, cadrée comme la fenêtre de l'application : la ligne bleue et
+   orange rappelle les deux équipes, fil rouge de la page. */
+.fenetre {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--filet);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  background: var(--surface);
+}
+.fenetre::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--allie) 0 50%, var(--adverse) 50% 100%);
+}
+.fenetre figcaption {
+  padding: 10px 16px;
+  color: var(--secondaire);
+  font-size: 0.88rem;
+  border-top: 1px solid var(--filet);
+}
+
+/* --- Sections */
+
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 24px 0;
+}
+.section h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+.section > p { color: var(--secondaire); max-width: var(--mesure); margin: 0 0 32px; }
+
+/* Ce que fait Featherward : texte et capture alternés, pas de cartes en série. */
+.vue {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: 40px;
+  align-items: center;
+  padding: 28px 0;
+  border-top: 1px solid var(--filet);
+}
+.vue:nth-of-type(even) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.vue:nth-of-type(even) .vue-texte { order: 2; }
+.vue h3 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+.vue p { color: var(--secondaire); margin: 0 0 12px; max-width: 48ch; }
+.vue ul { margin: 0; padding-left: 20px; color: var(--secondaire); max-width: 48ch; }
+.vue li { margin: 4px 0; }
+.vue-allie h3 { color: var(--allie); }
+.vue-adverse h3 { color: var(--adverse); }
+.vue-toi h3 { color: var(--or); }
+
+/* Comment ça marche : une vraie séquence, d'où les numéros. */
+.etapes {
+  list-style: none;
+  counter-reset: etape;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--filet);
+}
+.etapes li {
+  counter-increment: etape;
+  padding: 24px 24px 8px 0;
+}
+.etapes li + li { padding-left: 24px; border-left: 1px solid var(--filet); }
+.etapes li::before {
+  content: counter(etape);
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--or);
+  margin-bottom: 12px;
+}
+.etapes h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
+.etapes p { color: var(--secondaire); margin: 0; }
+
+/* Tes données : l'engagement, en clair. */
+.engagements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 48px;
+  margin: 0 0 20px;
+  max-width: 980px;
+}
+.engagements div { border-left: 2px solid var(--allie); padding-left: 16px; }
+.engagements h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 600; }
+.engagements p { margin: 0; color: var(--secondaire); }
+
+/* Questions fréquentes : un clic pour déplier. */
+.faq details { border-top: 1px solid var(--filet); padding: 14px 0; max-width: var(--mesure); }
+.faq details:last-child { border-bottom: 1px solid var(--filet); }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details p { color: var(--secondaire); margin: 10px 0 0; }
+
+/* --- Pages de texte (confidentialité, mentions légales) */
+
+.texte {
+  max-width: calc(var(--mesure) + 48px);
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+.texte h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; }
+.texte h2 { font-size: 1.3rem; font-weight: 600; margin: 40px 0 8px; }
+.texte p, .texte li { color: var(--secondaire); }
+.texte strong { color: var(--texte); font-weight: 600; }
+.texte table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
+.texte th, .texte td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--filet); vertical-align: top; }
+.texte th { color: var(--texte); font-weight: 600; }
+.texte td { color: var(--secondaire); }
+.maj { color: var(--secondaire); font-size: 0.9rem; }
+.a-completer { background: rgba(240, 128, 60, 0.18); color: var(--adverse); padding: 0 4px; border-radius: 3px; }
+
+/* --- Pied de page */
+
+.pied {
+  max-width: 1180px;
+  margin: 96px auto 0;
+  padding: 28px 24px 40px;
+  border-top: 1px solid var(--filet);
+  color: var(--secondaire);
+  font-size: 0.88rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+}
+.pied ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; }
+.pied p { margin: 0; max-width: 80ch; }
+
+/* --- Petits écrans */
+
+@media (max-width: 860px) {
+  .accueil, .vue, .vue:nth-of-type(even) { grid-template-columns: minmax(0, 1fr); }
+  .vue:nth-of-type(even) .vue-texte { order: 0; }
+  .etapes { grid-template-columns: minmax(0, 1fr); }
+  .etapes li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--filet); }
+  .engagements { grid-template-columns: minmax(0, 1fr); }
+  .pied { grid-template-columns: minmax(0, 1fr); }
+  .navigation { flex-wrap: wrap; gap: 12px 24px; }
+  .navigation ul { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

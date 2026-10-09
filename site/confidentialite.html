@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Featherward</title>
+<meta name="description" content="Ce que Featherward lit, enregistre et télécharge, et ce qu'il ne fait jamais.">
+<link rel="alternate" hreflang="en" href="en/privacy.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header>
+<nav class="navigation" aria-label="Navigation principale">
+<a class="marque" href="index.html">
+<svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#1a1e27" stroke="#d6b46a" stroke-width="6"/><path d="M30 76 C 40 50, 55 32, 74 22 C 72 44, 58 62, 36 72 Z" fill="#d6b46a"/><path d="M27 80 L 72 24" stroke="#f4f5f7" stroke-width="4" stroke-linecap="round"/></svg>
+Featherward
+</a>
+<ul>
+<li><a href="index.html#fonctionnement">Comment ça marche</a></li>
+<li><a href="confidentialite.html" aria-current="page">Confidentialité</a></li>
+<li><a href="en/privacy.html" hreflang="en" lang="en">English</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="contenu" class="texte">
+<h1>Politique de confidentialité</h1>
+<p class="maj">Mise à jour le 4 octobre 2026.</p>
+
+<h2>En bref</h2>
+<ul>
+<li><strong>Aucun compte, aucune inscription.</strong> Featherward ne te demande rien.</li>
+<li><strong>Tes statistiques restent sur ton ordinateur.</strong> L'application ne les envoie nulle part.</li>
+<li><strong>Aucun traceur.</strong> Ni dans l'application, ni sur ce site : pas de cookie, pas de mesure d'audience, pas de publicité.</li>
+<li><strong>Les statistiques communes sont anonymes.</strong> Elles viennent de parties dont aucun identifiant de joueur n'est conservé.</li>
+</ul>
+
+<h2>Qui est responsable</h2>
+<p>Featherward est édité par Clément FRANCOIS, à titre personnel, responsable du traitement des données décrit ici. Pour toute question sur tes données, ou pour exercer tes droits : <a href="mailto:contact.lol">contact.lol</a>.</p>
+
+<h2>Ce que l'application lit sur ton ordinateur</h2>
+<p>Featherward lit l'API locale du client League of Legends, sur ton ordinateur uniquement :</p>
+<ul>
+<li>la phase de jeu (en sélection, en partie ou non) et la sélection en cours : champions choisis et survolés, bans, rôles attribués, sorts d'invocateur. <strong>Pendant la sélection, les identités des autres joueurs ne sont jamais lues</strong> ;</li>
+<li>une fois la partie lancée, au chargement : le champion et le poste des dix joueurs (et leur Riot ID si le client le fournissait à ce moment, ce qui n'est pas le cas aujourd'hui) ;</li>
+<li>tes maîtrises de champions, tes 20 dernières parties et ton classement, pour ton profil et tes suggestions ;</li>
+<li>quand tu déplies une partie terminée : son détail, Riot ID des joueurs compris, et sa chronologie (or, niveau et position des dix joueurs minute par minute, kills et leur lieu, objectifs). Ils servent à l'analyse de ta partie, à son déroulé et à sa carte de chaleur, et restent en mémoire le temps de la session, sans être enregistrés ;</li>
+<li>la langue de ton client, pour afficher Featherward dans la même langue ;</li>
+<li>tes pages de runes, uniquement pour retrouver la page « Featherward » quand tu demandes un import.</li>
+</ul>
+<p>Ces informations servent aux calculs affichés, faits sur ton ordinateur. Elles ne quittent pas ton ordinateur. Featherward ne lit jamais la mémoire du jeu, et ne lit rien pendant une partie après son chargement.</p>
+
+<h2>Ce que l'application enregistre sur ton ordinateur</h2>
+<p>Dans le dossier <strong>%LOCALAPPDATA%\featherward</strong> :</p>
+<ul>
+<li>des données publiques de Riot mises en cache : catalogue des champions, objets et runes, icônes et illustrations ;</li>
+<li>les statistiques communes reçues pour ton serveur et ton niveau ;</li>
+<li>tes préférences d'affichage (taille de la fenêtre, onglets choisis, réglages) et ta langue (fichier <strong>langue.json</strong>) ;</li>
+<li>les joueurs de tes 200 dernières parties lues au chargement : pour chacun, son équipe, son champion et son poste (et son Riot ID s'il était fourni), sans aucun identifiant de compte (fichier <strong>identites.json</strong>), pour ton historique. Ils ne quittent jamais ton ordinateur.</li>
+</ul>
+<p>Le bouton « Vider le cache des images » des réglages en efface une partie ; supprimer ce dossier efface tout.</p>
+
+<h2>Ce que l'application télécharge</h2>
+<table>
+<thead><tr><th>Source</th><th>Contenu</th><th>Ce que la source peut voir</th></tr></thead>
+<tbody>
+<tr><td>Data Dragon, de Riot Games</td><td>Catalogue des champions, objets et runes, dans ta langue ; icônes, illustrations et carte de la Faille.</td><td>Ton adresse IP, comme pour toute page web.</td></tr>
+<tr><td>featherward.lol</td><td>Les statistiques communes de ton serveur et de ton niveau.</td><td>Ton adresse IP, et le fichier demandé, qui indique <strong>ton serveur et ton niveau de classement</strong>. Aucun autre identifiant n'est transmis.</td></tr>
+</tbody>
+</table>
+<p>Ces téléchargements ne contiennent ni ton nom, ni ton identifiant de joueur, ni tes statistiques.</p>
+
+<h2>Ce que l'application écrit dans ton client</h2>
+<p>Uniquement quand tu cliques sur « Importer », pendant une sélection : une page de runes nommée « Featherward » (créée ou mise à jour, jamais une des tiennes), ou tes sorts d'invocateur. Rien d'autre, jamais automatiquement.</p>
+
+<h2>Les statistiques communes</h2>
+<p>Les builds, runes et matchups affichés sont calculés à partir de parties classées récentes, récupérées par l'API officielle de Riot Games. Pour chaque participant d'une partie, seuls sont conservés :</p>
+<ul>
+<li>le champion, le rôle, l'équipe et le résultat ;</li>
+<li>les runes, les sorts d'invocateur, l'ordre de montée des sorts et les objets achetés avec leur minute d'achat ;</li>
+<li>pour la partie : son identifiant technique, son patch, sa durée, sa date et la tranche de niveau où elle a été trouvée.</li>
+</ul>
+<p><strong>Ne sont jamais conservés</strong> : le nom ou le Riot ID d'un joueur, ni l'identifiant de son compte. Pour ne pas parcourir deux fois le même joueur, le service garde seulement une empreinte technique de cet identifiant, conservée à part et sans aucun lien avec les parties enregistrées.</p>
+<p>Ces données brutes sont conservées le temps de calculer les statistiques de leur patch et du suivant, puis supprimées. Seules les statistiques agrégées, qui ne concernent plus aucun joueur, sont publiées.</p>
+<p>Ce traitement repose sur l'intérêt légitime : produire des statistiques de jeu générales, sans identifier personne.</p>
+
+<h2>Ce site</h2>
+<p>Ce site n'utilise ni cookie, ni mesure d'audience, ni service tiers : même sa police est hébergée ici. Son hébergeur, GitHub, enregistre comme tout hébergeur des journaux techniques (dont l'adresse IP des visiteurs) pour assurer le service et sa sécurité.</p>
+
+<h2>Tes droits</h2>
+<p>Tu disposes des droits d'accès, de rectification, d'effacement, d'opposition et de limitation prévus par le RGPD. Featherward ne conservant aucune donnée qui t'identifie, il ne peut généralement rien retrouver à ton sujet ; tu peux néanmoins écrire à l'adresse de contact ci-dessus. Tu peux aussi adresser une réclamation à la CNIL (cnil.fr).</p>
+
+<h2>Modifications</h2>
+<p>Toute modification de cette politique sera publiée sur cette page, avec sa date de mise à jour.</p>
+</main>
+
+<footer class="pied">
+<p>Featherward isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+<ul>
+<li><a href="confidentialite.html">Confidentialité</a></li>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+<li><a href="en/privacy.html" hreflang="en" lang="en">English</a></li>
+</ul>
+</footer>
+</body>
+</html>
