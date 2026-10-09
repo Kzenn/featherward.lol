@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Production key application · Featherward</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="saut" href="#contenu">Skip to content</a>
+<header>
+<nav class="navigation" aria-label="Main navigation">
+<a class="marque" href="index.html">
+<svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#1a1e27" stroke="#d6b46a" stroke-width="6"/><path d="M30 76 C 40 50, 55 32, 74 22 C 72 44, 58 62, 36 72 Z" fill="#d6b46a"/><path d="M27 80 L 72 24" stroke="#f4f5f7" stroke-width="4" stroke-linecap="round"/></svg>
+Featherward
+</a>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="contenu" class="texte">
+<h1>Production key application</h1>
+<p><strong>This page is provided for Riot Games' review of Featherward's production API key application.</strong> It holds the full application, which does not fit in the Developer Portal form. It will be removed once the application is approved.</p>
+
+<h2>Product</h2>
+<ul>
+<li><strong>Name</strong>: Featherward</li>
+<li><strong>Website</strong>: <a href="https://featherward.lol/en/">https://featherward.lol/en/</a></li>
+<li><strong>Developer</strong>: Clément FRANCOIS, independent developer based in France, publishing as a private individual.</li>
+<li><strong>Contact</strong>: <a href="mailto:contact@featherward.lol">contact@featherward.lol</a></li>
+</ul>
+
+<h2>Short description</h2>
+<p>A lightweight Windows companion for League of Legends: champion select insights (team overview, enemy cooldowns, matchup, recommended build and runes) and post-game analysis of your own games (strengths, areas to improve, objectives timeline, heatmap). Free, no account, in English and French. An optional subscription is planned for later (local game recording and long-term personal stats); everything above stays free.</p>
+
+<h2>Product description</h2>
+<p>Featherward is a native Windows desktop app (written in Rust, about 5 MB of memory at rest, no activity during games). It lives in the notification area and opens by itself when champion select starts.</p>
+<p><strong>During champion select</strong>, it shows:</p>
+<ul>
+<li>the player's team and the enemy team (champions as soon as they are revealed, roles, damage profile), with enemy ability and summoner spell cooldowns from Data Dragon;</li>
+<li>before the player locks in, their own champions ranked for this game: against the likely lane matchup and at their rank (with sample sizes), and what each one brings to the team (estimated from Data Dragon's static ratings). Several options, never a single pick imposed;</li>
+<li>once locked in, the player's champion front and center, the likely lane matchup and the enemy ultimates with their cooldowns;</li>
+<li>a recommended build for the player's champion at their rank: items, boots, starting items, skill order, runes and summoner spells, always showing both the most played option and the highest win rate option, with the number of games. One click imports a rune page (into a dedicated "Featherward" page, never the player's own pages) or the summoner spells.</li>
+</ul>
+<p><strong>After games</strong>, from the player's own match history in the League client:</p>
+<ul>
+<li>a profile (rank, form, roles, champions, last 20 games);</li>
+<li>for each finished game, on demand: a summary and scoreboard, the build and runes, an analysis (strengths and up to three areas to improve, each backed by a timestamped fact: deaths away from the team, objectives lost after a death, unspent gold, missed teamfights, laning phase against the lane opponent), an objectives timeline pinned on the team's gold lead, and a kills/positions heatmap.</li>
+</ul>
+<p>There is no score, no MMR estimate, and no comparison between players.</p>
+
+<h3>Planned</h3>
+<p>Not in the current version, described here for transparency:</p>
+<ul>
+<li><strong>Teamfight Tactics</strong>: profile, match history and game details for the local player, solo and Double Up, from the League client only (the same rules as above: nothing during the game, no other player's identity before the game ends).</li>
+<li><strong>Optional subscription</strong> (about 3 EUR per month or 30 EUR per year), only once the product is approved, for two features:
+<ul>
+<li><strong>local game recording</strong>: opt-in, off by default, video kept on the player's computer only. It uses Windows screen capture and the GPU encoder; key moments are marked after the game from the client's own game timeline. No game memory, no Live Client Data API, no information displayed during the game;</li>
+<li><strong>long-term personal stats</strong>: the player's own finished games archived locally (the client keeps only the last 20) and explorable over time.</li>
+</ul>
+Everything else stays free, without ads.</li>
+</ul>
+
+<h2>Compliance with Riot's policies</h2>
+<ul>
+<li><strong>No in-game information.</strong> Featherward never reads game memory and does not use the Live Client Data API. During a game, it reads the League client once at loading (the ten champions and their assigned positions), then nothing until the game ends.</li>
+<li><strong>Champion select anonymity.</strong> During champion select, other players' identities (names, Riot IDs, PUUIDs) are never read. A player who is anonymous (streamer mode) stays anonymous: Featherward never looks up their identity by any other means.</li>
+<li><strong>No MMR, no hidden ratings.</strong> Only game statistics.</li>
+<li><strong>Several options, never one imposed.</strong> Recommendations always show the most played and the highest win rate options, with sample sizes; small samples are filtered out by a confidence bound.</li>
+<li><strong>Writes to the client only on explicit click</strong>, during champion select, only to the dedicated "Featherward" rune page and the summoner spell selection.</li>
+<li><strong>Legal notice</strong> ("Featherward isn't endorsed by Riot Games…") in the app settings and on every page of the website.</li>
+<li><strong>Free tier.</strong> Everything described above is free, without ads or account. The planned subscription only covers new features (transformative: recording and long-term personal analysis), never Riot data as such, and will start only once the product is approved.</li>
+<li><strong>Augments and Arena items</strong>: no win rate is shown for them, anywhere.</li>
+</ul>
+
+<h2>Riot API usage (production key)</h2>
+<p>Used only by the <strong>shared statistics service</strong> (server side, never in the desktop app; no key is shipped in the app):</p>
+<table>
+<thead><tr><th>API</th><th>Endpoint</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>League-V4</td><td><code>/lol/league/v4/entries/RANKED_SOLO_5x5/{tier}/{division}</code>, <code>/lol/league/v4/{master,grandmaster,challenger}leagues/by-queue/RANKED_SOLO_5x5</code></td><td>Find ranked players per rank tier, to sample recent ranked games.</td></tr>
+<tr><td>Match-V5</td><td><code>/lol/match/v5/matches/by-puuid/{puuid}/ids</code></td><td>Recent ranked game IDs of sampled players.</td></tr>
+<tr><td>Match-V5</td><td><code>/lol/match/v5/matches/{matchId}</code></td><td>Champions, roles, runes, summoner spells, items, result.</td></tr>
+<tr><td>Match-V5</td><td><code>/lol/match/v5/matches/{matchId}/timeline</code></td><td>Item purchase order and skill order.</td></tr>
+</tbody>
+</table>
+<p>From these games, the service computes aggregated statistics per champion, role, rank tier and patch (builds, runes, matchups), and publishes them as static signed files (Ed25519 signed index with an expiry, SHA-256 checked packages) that the desktop app downloads. <strong>No player identifier is kept</strong> with the games: only champion, role, team, result, runes, summoner spells, skill order and items. A keyed fingerprint of the PUUID (HMAC-SHA-256, with a secret key stored apart from the database) is kept separately to avoid sampling the same player twice. Raw games are deleted once the statistics of their patch and the next one are computed.</p>
+<p>Rate: the service respects the production limits with a margin (480 per 10 s, 29,000 per 10 min per region), honours <code>Retry-After</code> on 429, and runs as a batch job (a few thousand games per tier and patch).</p>
+<p>Optionally (to be discussed): per-game item purchase order, skill order and stat shards for the player's own game details, which the League client does not provide. This would require a small relay holding the production key; it is not part of the current product.</p>
+
+<h2>League Client API (LCU) usage</h2>
+<p>Local only (<code>127.0.0.1</code>, port and password from the client's <code>lockfile</code>; the client's certificate is checked against Riot's root certificate). No data read from the client leaves the player's computer.</p>
+<table>
+<thead><tr><th>Endpoint</th><th>Usage</th></tr></thead>
+<tbody>
+<tr><td><code>GET /riotclient/region-locale</code></td><td>At connection: only the client's language, to show Featherward and Data Dragon data in the same language.</td></tr>
+<tr><td><code>GET /lol-gameflow/v1/gameflow-phase</code></td><td>Current phase (champion select or not), at connection.</td></tr>
+<tr><td><code>GET /lol-champ-select/v1/session</code></td><td>Current champion select: picked and hovered champions, bans, assigned roles, summoner spells, and the local player's own selected skin (to show its splash art, taken from Data Dragon). <strong>Other players' identities are never read.</strong></td></tr>
+<tr><td><code>GET /lol-gameflow/v1/session</code></td><td><strong>Only once the game has started</strong> (GameStart or InProgress), never during champion select: the ten players' team, champion and assigned position, read once at loading. In ranked, the client provides no names; an anonymous player stays anonymous.</td></tr>
+<tr><td><code>GET /lol-champion-mastery/v1/local-player/champion-mastery</code></td><td>Local player's mastery: their champion pool and matchups.</td></tr>
+<tr><td><code>GET /lol-match-history/v1/products/lol/current-summoner/matches</code></td><td>Local player's last 20 games: form, roles, record per champion.</td></tr>
+<tr><td><code>GET /lol-ranked/v1/current-ranked-stats</code></td><td>Local player's rank: display, and choice of the statistics tier.</td></tr>
+<tr><td><code>GET /lol-match-history/v1/games/{id}</code></td><td>Details of one of the local player's games, <strong>only when they open it</strong>: champions, KDA, damage, items, runes and spells of the ten participants, and their Riot ID (<code>gameName</code> and <code>tagLine</code> only, no account identifier).</td></tr>
+<tr><td><code>GET /lol-match-history/v1/game-timelines/{id}</code></td><td>Timeline of a <strong>finished</strong> game of the local player, <strong>only when they open it</strong>: per-minute snapshots (gold, XP, CS, level, position) and events (champion kills and their location, epic monsters, buildings), for the analysis, objectives timeline and heatmap.</td></tr>
+<tr><td><code>GET /lol-perks/v1/pages</code></td><td>Rune pages, to find the "Featherward" page before an import.</td></tr>
+<tr><td><code>GET /lol-summoner/v1/current-summoner</code></td><td>At connection: only the local player's PUUID, reduced to an in-memory fingerprint (never stored or sent) to detect an account change.</td></tr>
+</tbody>
+</table>
+<p>Subscriptions (WebSocket): <code>lol-gameflow_v1_gameflow-phase</code>, <code>lol-champ-select_v1_session</code>, <code>lol-summoner_v1_current-summoner</code>. No general subscription.</p>
+<p>Writes, <strong>only on explicit player click</strong> during champion select:</p>
+<table>
+<thead><tr><th>Endpoint</th><th>Usage</th></tr></thead>
+<tbody>
+<tr><td><code>PUT /lol-perks/v1/pages/{id}</code></td><td>Update the rune page named "Featherward", if it exists and is editable.</td></tr>
+<tr><td><code>POST /lol-perks/v1/pages</code></td><td>Create the "Featherward" page otherwise. With no free slot, Featherward tells the player and overwrites nothing.</td></tr>
+<tr><td><code>PUT /lol-perks/v1/currentpage</code></td><td>Select the updated "Featherward" page.</td></tr>
+<tr><td><code>PATCH /lol-champ-select/v1/session/my-selection</code></td><td>Set the suggested summoner spells, keeping the slot of spells the player already had.</td></tr>
+</tbody>
+</table>
+<p>Featherward never changes the player's own rune pages, and never picks or locks a champion.</p>
+
+<h2>Data and privacy</h2>
+<ul>
+<li>No account, no sign-up, no trackers, no ads.</li>
+<li>The player's stats and game analysis are computed on their computer and never sent anywhere.</li>
+<li>The desktop app downloads only Data Dragon (Riot) and the shared statistics for the player's server and rank tier (featherward.lol).</li>
+<li>Privacy policy: <a href="privacy.html">https://featherward.lol/en/privacy.html</a></li>
+</ul>
+
+<h2>Build for review</h2>
+<p>The public download is not open yet. A Windows build can be shared with the reviewers on request: <a href="mailto:contact@featherward.lol">contact@featherward.lol</a>.</p>
+
+<h2>Screenshots</h2>
+<p>Champion select, before locking in:</p>
+<p><img src="../captures/en/selection-avant.png" width="1280" height="820" alt="Champion select before locking in: the player's pool ranked for this game."></p>
+<p>Champion select, once locked in:</p>
+<p><img src="../captures/en/selection.png" width="1280" height="820" alt="Champion select once locked in: build, runes, matchup and enemy ultimates."></p>
+<p>Rune page import:</p>
+<p><img src="../captures/en/runes.png" width="1248" height="240" alt="A suggested rune page with its import button."></p>
+<p>Game analysis:</p>
+<p><img src="../captures/en/analyse.png" width="860" height="700" alt="A game's analysis: strengths and areas to improve."></p>
+<p>Objectives timeline:</p>
+<p><img src="../captures/en/objectifs.png" width="860" height="590" alt="Objectives pinned on the gold lead curve."></p>
+<p>Heatmap:</p>
+<p><img src="../captures/en/carte.png" width="860" height="520" alt="A game's heatmap with a kill card open."></p>
+<p>Profile:</p>
+<p><img src="../captures/en/profil.png" width="1280" height="820" alt="The profile view."></p>
+<p>The screenshots use sample data.</p>
+</main>
+
+<footer class="pied">
+<p>Featherward isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+<ul>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="legal.html">Legal notice</a></li>
+</ul>
+</footer>
+</body>
+</html>
