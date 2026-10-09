@@ -243,6 +243,29 @@ a:hover { color: var(--texte); }
 .engagements h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 600; }
 .engagements p { margin: 0; color: var(--secondaire); }
 
+/* Offres : gratuit et Premium côte à côte. */
+.offres {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 980px;
+}
+.offre {
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-radius: 14px;
+  padding: 24px 26px;
+}
+.offre h3 { margin: 0; font-size: 1.2rem; font-weight: 600; }
+.offre .prix { font-size: 1.6rem; font-weight: 600; margin: 6px 0 14px; }
+.offre .prix span { font-size: 1rem; font-weight: 400; color: var(--secondaire); }
+.offre ul { margin: 0; padding-left: 20px; color: var(--secondaire); }
+.offre li { margin: 8px 0; }
+.offre strong { color: var(--texte); font-weight: 600; }
+.offre .note { margin: 16px 0 0; }
+.offre-premium { border-color: var(--or); box-shadow: 0 0 0 1px rgba(214, 180, 106, 0.25), 0 18px 40px rgba(0, 0, 0, 0.35); }
+.offre-premium h3 { color: var(--or); }
+
 /* Questions fréquentes : un clic pour déplier. */
 .faq details { border-top: 1px solid var(--filet); padding: 14px 0; max-width: var(--mesure); }
 .faq details:last-child { border-bottom: 1px solid var(--filet); }
@@ -290,7 +313,7 @@ a:hover { color: var(--texte); }
   .vue:nth-of-type(even) .vue-texte { order: 0; }
   .etapes { grid-template-columns: minmax(0, 1fr); }
   .etapes li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--filet); }
-  .engagements { grid-template-columns: minmax(0, 1fr); }
+  .engagements, .offres { grid-template-columns: minmax(0, 1fr); }
   .pied { grid-template-columns: minmax(0, 1fr); }
   .navigation { flex-wrap: wrap; gap: 12px 24px; }
   .navigation ul { margin-left: 0; }
