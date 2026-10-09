@@ -1,7 +1,9 @@
 name: Site
 
 # Publie le dossier site/ sur GitHub Pages (featherward.lol) à chaque
-# modification du site sur la branche principale.
+# modification du site sur la branche principale. Pages doit avoir pour
+# source « GitHub Actions » (Settings, Pages) avant le premier envoi ;
+# sinon, relancer depuis l'onglet Actions (Run workflow).
 on:
   push:
     branches: [main, master]
