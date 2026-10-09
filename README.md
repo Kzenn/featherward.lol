@@ -64,3 +64,11 @@ domaine à GitHub.
 - **La politique de confidentialité décrit ce que fait le code.** Toute
   évolution de l'application ou du service commun qui touche aux données
   doit s'y refléter.
+
+## À retirer après la validation par Riot
+
+- `site/en/riot-application.html` : dossier complet de la demande de clé
+  de production, pour les relecteurs de Riot (non lié depuis le site,
+  non indexé). La page annonce elle-même son retrait.
+- `site/riot.txt` : code de vérification du domaine, à garder tant que
+  Riot peut le revérifier ; à retirer avec la page ci-dessus.
