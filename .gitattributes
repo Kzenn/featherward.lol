@@ -1,3 +1,4 @@
 # Fichiers signés octet par octet : aucune conversion de fin de ligne.
 site/maj/* -text
 site/riot.txt -text
+site/donnees/** -text
