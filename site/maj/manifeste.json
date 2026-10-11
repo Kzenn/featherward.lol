@@ -1,10 +1,10 @@
 {
   "version_format": 1,
-  "version": "0.53.0",
-  "publie_ms": 1791716162041,
-  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.53.0/featherward-v0.53.0-windows-x64.exe",
-  "sha256": "3ef7a08e21d3ad91728d48f248683e459fa4c0bad1b29509cd2d1fc507cf1d1a",
-  "taille": 8641536,
+  "version": "0.54.0",
+  "publie_ms": 1791726316423,
+  "url": "https://github.com/Kzenn/featherward.lol/releases/download/v0.54.0/featherward-v0.54.0-windows-x64.exe",
+  "sha256": "22770a450c75a8c4141018cdec4442b61f801b431ed7473a3ff5b716ab8ddb84",
+  "taille": 8709632,
   "notes_fr": "",
   "notes_en": ""
 }
