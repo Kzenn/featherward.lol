@@ -1,0 +1,55 @@
+/* Page « compo » : une compo de TFT partagée depuis Featherward. */
+
+.compo { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+.compo h1 { font-size: 1.6rem; margin: 8px 0 4px; }
+.compo-sous-titre { color: var(--secondaire); margin: 0 0 24px; }
+.compo-note { color: var(--secondaire); font-size: 0.85rem; }
+
+.plateau { display: flex; flex-direction: column; gap: 0; margin: 8px 0 28px; }
+.rangee { display: flex; gap: 6px; margin-top: -16px; }
+.rangee:first-child { margin-top: 0; }
+.rangee.decalee { padding-left: 35px; }
+
+.case { position: relative; width: 64px; height: 72px; flex: none; }
+.hex {
+  position: absolute; inset: 0;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: var(--filet);
+}
+.hex.vide { background: var(--surface-2); }
+.hex img {
+  position: absolute; inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  object-fit: cover;
+}
+.cout-1 { background: #8f99a8; } .cout-2 { background: #1fb98d; } .cout-3 { background: #2f8fe6; }
+.cout-4 { background: #c25be0; } .cout-5 { background: #f2b234; }
+
+.etoiles { position: absolute; top: -6px; left: 0; right: 0; display: flex; justify-content: center; gap: 1px; z-index: 2; }
+.etoile {
+  width: 11px; height: 11px;
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.e1 { background: #b07b55; } .e2 { background: #cfd8e6; } .e3 { background: #f2c94c; }
+
+.objets { position: absolute; bottom: -4px; left: 0; right: 0; display: flex; justify-content: center; gap: 2px; z-index: 2; }
+.objets img { width: 18px; height: 18px; border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.6); }
+
+.compo-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-bottom: 20px; }
+.compo-unite {
+  display: flex; gap: 10px; align-items: center;
+  background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; padding: 8px 10px;
+}
+.compo-unite > img { width: 40px; height: 40px; border-radius: 8px; }
+.compo-unite b { display: block; font-weight: 600; }
+.compo-unite span { color: var(--secondaire); font-size: 0.8rem; }
+
+.compo-actions { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+
+@media (max-width: 560px) {
+  .case { width: 42px; height: 48px; }
+  .rangee { gap: 4px; margin-top: -10px; }
+  .rangee.decalee { padding-left: 23px; }
+  .objets img { width: 13px; height: 13px; }
+  .etoile { width: 8px; height: 8px; }
+}

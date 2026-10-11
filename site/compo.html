@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Compo partagée · Featherward</title>
+<meta name="description" content="Une compo de TFT partagée depuis le comp builder de Featherward.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="compo.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%231a1e27' stroke='%23d6b46a' stroke-width='6'/%3E%3Cpath d='M30 76 C 40 50, 55 32, 74 22 C 72 44, 58 62, 36 72 Z' fill='%23d6b46a'/%3E%3C/svg%3E">
+<script src="compo.js" defer></script>
+</head>
+<body>
+<header>
+<nav class="navigation" aria-label="Navigation principale">
+<a class="marque" href="index.html">
+<svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#1a1e27" stroke="#d6b46a" stroke-width="6"/><path d="M30 76 C 40 50, 55 32, 74 22 C 72 44, 58 62, 36 72 Z" fill="#d6b46a"/><path d="M27 80 L 72 24" stroke="#f4f5f7" stroke-width="4" stroke-linecap="round"/></svg>
+Featherward
+</a>
+</nav>
+</header>
+<main id="contenu" class="compo">
+<h1 id="titre">Compo partagée</h1>
+<p id="sous-titre" class="compo-sous-titre"></p>
+<div id="plateau" class="plateau" aria-label="Plateau"></div>
+<div id="liste" class="compo-liste"></div>
+<div class="compo-actions">
+<button id="copier" class="bouton" type="button" hidden>Copier le code</button>
+<span id="copie" class="compo-note" hidden></span>
+</div>
+<p id="explication" class="compo-note"></p>
+</main>
+</body>
+</html>
